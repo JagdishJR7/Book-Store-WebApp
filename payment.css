@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.container {
+  /* max-width: 1000px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+}
+
+#payment-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#UPI-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40%;
+}
+#UPI {
+  display: flex;
+  /* flex-direction: row; */
+  flex-direction: column;
+}
+#UPI button{
+    margin: 10px  10px;
+    padding: 10px 10px;
+}
+
+#UPI button:hover {
+  background-color: #214d22;
+}
+
+#submit {
+  width: 200px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+.form-steps {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+/* Styles for each form step */
+.form-step {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-step button a {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #dbebdc;
+  color: #292727;
+  border: none;
+  border-radius: 4px;
+}
+/* Styles for heading in each step */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Styles for payment method options */
+.payment-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styles for buttons */
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 4px;
+  text-align: center;
+  color: #555;
+}
+
+.current-step {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #payment-form {
+    width: 100%;
+  }
+
+  #UPI-form {
+    width: 100%;
+  }
+
+  #UPI {
+    flex-direction: row;
+  }
+
+  #submit {
+    width: 100%;
+  }
+}

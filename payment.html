@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Multi-Step Form</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+
+
+    <div class="form-steps">
+        <div class="form-step active" id="step1">
+            <h2>Step 1: Confirm Details</h2>
+            <form action="">
+                <label for="">Name: </label>
+                <input type="text" name="name" id="">
+                <br><br>
+
+                <label for="">Address: </label>
+                <textarea name="address" id="" cols="50" rows="6" placeholder="Enter minor to minor detail..."></textarea>
+                <br><br>
+
+                <label for="">Phone no: </label>
+                <input type="number" name="phoneNo." min="10" max="10">
+                <br><br>
+
+
+            </form>
+            <button onclick="nextStep()">Next</button>
+        </div>
+
+        <div class="form-step " id="step2">
+            <h2>Step 2: Choose Payment Method</h2>
+            <div class="container">
+                <form id="payment-form">
+                    <h3>Debit Card:-</h3>
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="expiration-date">Expiration Date:</label>
+                        <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="name">Name on Card:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+        
+        
+                    <button type="submit" id="submit">Submit Payment</button>
+                </form>
+        
+                <form id="UPI-form">
+                    <h3>UPI :- </h3>
+                    <div id="UPI">
+                        <div class="form-group">
+                            <button>Paytm</button>
+        
+                        </div>
+                        <div class="form-group">
+                            <button>PhonePay</button>
+                        </div>
+                        <div class="form-group">
+                            <button>BharatPay</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button onclick="nextStep()">Next</button>
+        </div>
+
+
+        <div class="form-step" id="step4">
+            <h2>Order Confirmed</h2>
+            <p>You will get this order or very good book by 3rd or 4th day from today. till then by by ....</p>
+            <p>I hope you enjoyed our service...</p>
+            <p>Thank you so much.</p>
+            <br><br>
+
+            <button><a href="index.html">Go to Home</a></button>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+
+        function nextStep() {
+            const currentFormStep = document.getElementById(`step${currentStep}`);
+            currentFormStep.classList.remove('active');
+            currentStep++;
+
+            const nextFormStep = document.getElementById(`step${currentStep}`);
+            if (nextFormStep) {
+                nextFormStep.classList.add('active');
+                updateStepIndicator();
+            } else {
+                // If there is no next step, the order is confirmed
+                document.getElementById('step4').classList.add('active');
+            }
+        }
+
+        function updateStepIndicator() {
+            const stepIndicators = document.querySelectorAll('.step');
+            stepIndicators.forEach((indicator, index) => {
+                if (index + 1 < currentStep) {
+                    indicator.classList.remove('current-step');
+                } else if (index + 1 === currentStep) {
+                    indicator.classList.add('current-step');
+                }
+            });
+        }
+
+        function confirmOrder() {
+            // Add logic to handle order confirmation and show final pop-up
+            alert('Order placed successfully!');
+        }
+    </script>
+
+
+</body>
+
+</html>

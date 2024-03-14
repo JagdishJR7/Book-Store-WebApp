@@ -1,0 +1,390 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  background-image: url("book-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #94d396;
+  /* color: #fff; */
+}
+
+section {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px 20px 40px; /* Adjust the bottom margin as needed */
+}
+
+/* media query styling of header  */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+}
+
+/* -------------Featured section styling-------- */
+
+.featured-books-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Featured h2{
+    color: #333;
+    text-align: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.featured-book {
+  width: calc(30% - 20px); /* 20px is the total margin (left + right) */
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.featured-book img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.featured-book p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.featured-book button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover styles */
+.featured-book:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-book:hover img {
+  transform: scale(1.1);
+}
+
+.featured-book:hover button {
+  background-color: #45a049;
+}
+/* media query for featured  */
+@media only screen and (max-width: 768px) {
+  .featured-book {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+/* ---- for more styling -----  */
+/* Style for the container div */
+.more {
+  text-align: center; /* Center the content */
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+/* Style for the link */
+.more a {
+  text-decoration: none; /* Remove underline */
+  /* background-color: #4caf50;  */
+  color: #333; 
+  text-decoration: underline;
+  /* padding: 10px 20px;  */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+/* Hover effect */
+.more a:hover {
+  /* background-color: #45a049; */
+  color: #888;
+}
+
+
+/* ---- about us styling -----  */
+.aboutus {
+  margin: 100px;
+}
+.aboutus h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 100px; */
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text .text {
+  margin-left: 30px;
+}
+
+.about-text h2 {
+  color: #4caf50;
+  margin-bottom: 30px;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+/* media query styling of aboust us  */
+@media only screen and (max-width: 768px) {
+  .aboutus {
+    margin: 20px;
+  }
+
+  .about-section {
+    flex-direction: column-reverse;
+  }
+
+  .about-image {
+    flex: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    flex: none;
+  }
+}
+
+/* about us styling end /// */
+
+/* --- footer stlying ---  */
+footer {
+  background-color: #ddd; /* Green color, you can choose your own color */
+  color: #333;
+  text-align: center;
+  padding: 15px;
+  /* position: fixed; */
+  width: 100%;
+}
+
+.footer-heading h2 {
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer {
+  bottom: 0;
+  /* box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);*/
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.footer h2 {
+  margin-left: 40px;
+  /* margin: 5px 0; */
+  color: #333;
+  width: 20%;
+}
+
+.footer h2 b {
+  color: #195e1c;
+  font-size: 45px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  width: 20%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 8px;
+  /* background-color: #4CAF50; */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  background-color: #86da8b;
+}
+
+.footer-heading {
+  width: 40%;
+}
+
+footer p{
+  /* border: 1px solid red; */
+  padding: 20px 20px ;
+  margin-top: 20px;
+  background-color: #333;
+  color: #fff;
+}
+/* Additional styling for footer social media links */
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #333;
+  font-size: 25px;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: #089411;
+}
+
+/* Your existing styles for footer */
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1200px) {
+  .footer h2 {
+    font-size: 18px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer p {
+    padding: 15px;
+  }
+
+  .footer-social a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer h2 {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .footer-links, .footer-social {
+    width: 100%;
+  }
+
+  .footer-links a, .footer-social a {
+    text-align: center;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+  }
+  .footer-social{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .footer-social a {
+    font-size: 25px;
+  }
+
+  footer p {
+    margin-top: 10px;
+  }
+}
+
